@@ -17,7 +17,8 @@ if __name__ == "__main__":
                 for line in content:
                     desFile.write(parser(line))
     except FileNotFoundError as e:
-        print(f"missing {sys.argv[1]}", file=sys.stderr)
+        print(f"Missing {sys.argv[1]}", file=sys.stderr)
+        exit(1)
 
 
 def parser(line):
