@@ -16,9 +16,13 @@ if __name__ == "__main__":
             with open(sys.argv[2], "w") as desFile:
                 for line in content:
                     desFile.write(parser(line))
-    except:
+    except FileNotFoundError as e:
         print(f"missing {sys.argv[1]}", file=sys.stderr)
 
 
 def parser(line):
+    '''function that do the parsing
+    args:
+        line (str): a string ended with newline character to be parsed
+    '''
     pass
